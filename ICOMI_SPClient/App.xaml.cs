@@ -14,5 +14,6 @@ namespace ICOMI_SPClient
     {
         //Alex
         //Comment
+        string test = string.Empty;
     }
 }
