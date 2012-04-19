@@ -8,5 +8,7 @@ namespace ICOMI_SPClient.Message
 {
     public class AddBPHMessage : MessageBase
     {
+
+        //TEST MESSAGE
     }
 }
