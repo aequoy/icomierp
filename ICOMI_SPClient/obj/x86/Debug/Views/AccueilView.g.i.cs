@@ -9,6 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using ICOMI_SPClient.Controls;
 using ICOMI_SPClient.ViewModels;
 using MahApps.Metro.Controls;
 using Microsoft.Expression.Interactivity.Core;
