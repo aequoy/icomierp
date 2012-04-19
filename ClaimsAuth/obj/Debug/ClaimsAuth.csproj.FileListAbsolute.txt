@@ -7,3 +7,10 @@ C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepoin
 C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\obj\Debug\ClaimsAuth.dll
 C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\obj\Debug\ClaimsAuth.pdb
 C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\obj\Debug\ResolveAssemblyReference.cache
+C:\icomierp\ClaimsAuth\bin\Debug\ClaimsAuth.dll
+C:\icomierp\ClaimsAuth\bin\Debug\ClaimsAuth.pdb
+C:\icomierp\ClaimsAuth\bin\Debug\Microsoft.SharePoint.Client.xml
+C:\icomierp\ClaimsAuth\bin\Debug\Microsoft.SharePoint.Client.Runtime.xml
+C:\icomierp\ClaimsAuth\obj\Debug\ResolveAssemblyReference.cache
+C:\icomierp\ClaimsAuth\obj\Debug\ClaimsAuth.dll
+C:\icomierp\ClaimsAuth\obj\Debug\ClaimsAuth.pdb

@@ -3,3 +3,8 @@ C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepoin
 C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_FW\obj\Debug\ICOMI_FW.dll
 C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_FW\obj\Debug\ICOMI_FW.pdb
 C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_FW\obj\Debug\ResolveAssemblyReference.cache
+C:\icomierp\ICOMI_FW\bin\Debug\ICOMI_FW.dll
+C:\icomierp\ICOMI_FW\bin\Debug\ICOMI_FW.pdb
+C:\icomierp\ICOMI_FW\obj\Debug\ResolveAssemblyReference.cache
+C:\icomierp\ICOMI_FW\obj\Debug\ICOMI_FW.dll
+C:\icomierp\ICOMI_FW\obj\Debug\ICOMI_FW.pdb

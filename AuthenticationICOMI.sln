@@ -15,21 +15,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICOMI_CONTENT", "ICOMI_CONT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librairies", "Librairies", "{CDA6AB60-1E01-4EE2-8A0D-C6D195692C0B}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.dll = ..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.dll
-		..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.pdb = ..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.pdb
-		..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.dll = ..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.dll
-		..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.pdb = ..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.pdb
-		..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.dll = ..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.dll
-		..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.pdb = ..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.pdb
+		..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.dll = ..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.dll
+		..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.pdb = ..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.pdb
+		..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.dll = ..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.dll
+		..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.pdb = ..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.pdb
+		..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.dll = ..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.dll
+		..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.pdb = ..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.pdb
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP8Controls", "WP8Controls\WP8Controls.csproj", "{86072A7C-8EE9-4775-891B-97FFAB66AF78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICOMI_DOMAIN", "ICOMI_DOMAIN\ICOMI_DOMAIN.csproj", "{A80DD72B-4D5A-4318-9D8E-ADE575B7AA78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahApps.Metro", "..\..\..\..\..\..\..\..\..\AitDev\MahApps-MahApps.Metro-5979fe9\MahApps.Metro\MahApps.Metro.csproj", "{5B1710D2-5DC8-4754-91B2-19165DE49B3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahApps.Metro", "MahApps.Metro\MahApps.Metro.csproj", "{5B1710D2-5DC8-4754-91B2-19165DE49B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahApps.Metro.Resources", "..\..\..\..\..\..\..\..\..\AitDev\MahApps-MahApps.Metro-5979fe9\MahApps.Metro.Resources\MahApps.Metro.Resources.csproj", "{E708AC99-605B-42A0-8D20-ABCA8FE42DD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahApps.Metro.Resources", "MahApps.Metro.Resources\MahApps.Metro.Resources.csproj", "{E708AC99-605B-42A0-8D20-ABCA8FE42DD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

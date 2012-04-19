@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_SPClient\obj\x86\Debug\
+C:\icomierp\ICOMI_SPClient\obj\x86\Debug\
 ICOMI_SPClient
 none
 false
 DEBUG;TRACE
-C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_SPClient\App.xaml
+C:\icomierp\ICOMI_SPClient\App.xaml
 22-1842238391
 
 561731731648
-37758351612
+371275088268
 Assets\Brushes.xaml;Assets\CoreStyles.xaml;Assets\Fonts.xaml;Assets\SDKStyles.xaml;Assets\Styles.xaml;MainWindow.xaml;Views\AccueilView.xaml;Views\AddBHPDocumentView.xaml;Views\BHPDocumentView.xaml;Views\BHPView.xaml;Views\DiversView.xaml;Views\EtablissementView.xaml;Views\HACCPView.xaml;Views\HomeView.xaml;Views\InstallationView.xaml;Views\LoginView.xaml;Views\MenuView.xaml;Views\MyTasksView.xaml;Views\RecetteView.xaml;Views\SearchView.xaml;Views\TaskView.xaml;WIN8RD.xaml;
 
 False

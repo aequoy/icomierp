@@ -300,14 +300,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\AitDev\MahApps-MahApps.Metro-5979fe9\MahApps.Metro.Resources\MahApps.Metro.Resources.csproj">
-      <Project>{E708AC99-605B-42A0-8D20-ABCA8FE42DD2}</Project>
-      <Name>MahApps.Metro.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\AitDev\MahApps-MahApps.Metro-5979fe9\MahApps.Metro\MahApps.Metro.csproj">
-      <Project>{5B1710D2-5DC8-4754-91B2-19165DE49B3D}</Project>
-      <Name>MahApps.Metro</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ICOMI_CONTENT\ICOMI_CONTENT.csproj">
       <Project>{7A25AC90-3F00-4A7A-8F12-7F3F7F35C54C}</Project>
       <Name>ICOMI_CONTENT</Name>
@@ -323,6 +315,14 @@
     <ProjectReference Include="..\ICOMI_SPService\ICOMI_SPService.csproj">
       <Project>{46EEF76B-65D5-4931-B96D-54B7EAB5AC43}</Project>
       <Name>ICOMI_SPService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MahApps.Metro.Resources\MahApps.Metro.Resources.csproj">
+      <Project>{E708AC99-605B-42A0-8D20-ABCA8FE42DD2}</Project>
+      <Name>MahApps.Metro.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MahApps.Metro\MahApps.Metro.csproj">
+      <Project>{5B1710D2-5DC8-4754-91B2-19165DE49B3D}</Project>
+      <Name>MahApps.Metro</Name>
     </ProjectReference>
     <ProjectReference Include="..\WP8Controls\WP8Controls.csproj">
       <Project>{86072A7C-8EE9-4775-891B-97FFAB66AF78}</Project>
