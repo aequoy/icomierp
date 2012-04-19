@@ -15,5 +15,6 @@ namespace ICOMI_SPClient
         //Alex
         //Comment
         string test = string.Empty;
+        string test2 = string.Empty;
     }
 }
