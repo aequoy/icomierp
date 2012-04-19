@@ -13,5 +13,6 @@ namespace ICOMI_SPClient
     public partial class App : Application
     {
         //Alex
+        //Comment
     }
 }
