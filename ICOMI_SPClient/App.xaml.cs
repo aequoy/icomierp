@@ -12,5 +12,9 @@ namespace ICOMI_SPClient
     /// </summary>
     public partial class App : Application
     {
+        //Alex
+        //Comment
+        string test = string.Empty;
+        string test2 = string.Empty;
     }
 }
