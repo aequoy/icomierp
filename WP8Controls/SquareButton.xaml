@@ -1,0 +1,18 @@
+﻿<Button x:Name="button" x:Class="WP8Controls.SquareButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="Transparent" BorderBrush="Transparent"  BorderThickness="0" Style="{StaticResource SquaredTiltButton}"  Width="152" Height="152" Margin="4">
+        <Grid >
+            <Ellipse Margin="0,-10,0,0" Width="152" Height="152" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Ellipse.Fill>
+                    <ImageBrush   Stretch="Fill" ImageSource="{Binding Image, ElementName=button}"  />
+                </Ellipse.Fill>
+                <Ellipse.Clip>
+                    <EllipseGeometry RadiusX="61" RadiusY="61" Center="76,76"/>
+                </Ellipse.Clip>
+            </Ellipse>
+            <TextBlock VerticalAlignment="Bottom" Margin="11,0,0,0" HorizontalAlignment="Left"  Foreground="White" FontFamily="{StaticResource PhoneFontFamilyNormal}" FontSize="{StaticResource PhoneFontSizeNormal}" Text="{Binding Text, ElementName=button}" />
+        </Grid>
+</Button>

@@ -1,0 +1,622 @@
+﻿<Grid x:Class="ICOMI_SPClient.Views.InstallationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+	xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+         xmlns:dt="clr-namespace:ICOMI_SPClient.ViewModels"
+        mc:Ignorable="d"
+		d:DataContext="{d:DesignInstance {x:Type dt:EtablissementViewModel}, IsDesignTimeCreatable=True}"
+	    d:DesignHeight="700" d:DesignWidth="1200">
+	<Grid.RowDefinitions>
+		<RowDefinition Height="0.06*"/>
+		<RowDefinition Height="0.94*"/>
+	</Grid.RowDefinitions>
+	<Grid.Resources>
+		<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+				<DataTemplate x:Key="AppareilDataTemplate">
+	                <Controls:Tile Title="{Binding TileTitle}"
+	                                       Count="{Binding NbOccurence}" Command="{Binding DataContext.SelectTaskCommand, ElementName=MainPanorama}" CommandParameter="{Binding}">
+	                            <Controls:MetroImage Source="{DynamicResource appbar_alert}" VerticalAlignment="Stretch" Margin="-40,-68,0,0" />
+	                 </Controls:Tile>
+	        	</DataTemplate>
+	        	<ItemsPanelTemplate x:Key="AppareilsListItemsPanelTemplate">
+	        		<StackPanel IsItemsHost="True" Orientation="Horizontal"/>
+	        	</ItemsPanelTemplate>
+			</ResourceDictionary>
+	</Grid.Resources>
+	<Image HorizontalAlignment="Right" Source="/ICOMI_SPClient;component/Resources/MP910221704.JPG" Stretch="Uniform" Grid.Row="1" Margin="0,34,0,-97" Width="393.5"/>
+	<StackPanel Grid.Row="0" Orientation="Horizontal">
+			<TextBlock Text="Choix du site : "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+							<ComboBox Margin="5,5,5,0"
+                                          VerticalAlignment="Top"
+                                          HorizontalAlignment="Left"
+                                          SelectedIndex="0" Width="200">
+                                    <ComboBoxItem Content="Etablissement" />
+                                    <ComboBoxItem Content="Site 1" />
+                                    <ComboBoxItem Content="Site 2" />
+                                </ComboBox>
+	</StackPanel>
+   <TabControl Margin="0,10,0,0" Grid.Row="1">
+                <TabItem Header="Diagnostic _Alimentation |">
+                	<Grid Margin="0,20">
+                		<Grid.RowDefinitions>                			
+                			<RowDefinition Height="0.5*"/>                			
+                			<RowDefinition Height="0.5*"/>
+                		</Grid.RowDefinitions>
+                		<GroupBox Header="Diagnostic" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">
+							<Grid>
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="200"/>                			
+	                				<ColumnDefinition Width="*"/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Text="Diagnostic réalisé ? "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+									<Controls:ToggleSwitchButton x:Name="Switch"										
+											VerticalAlignment="Top" HorizontalAlignment="Right" >
+		                				<i:Interaction.Triggers>
+		                					<i:EventTrigger EventName="Checked">
+		                						<ei:ChangePropertyAction TargetName="textBlock" PropertyName="Text" Value="Oui"/>												
+		                					</i:EventTrigger>
+											<i:EventTrigger EventName="Unchecked">
+		                						<ei:ChangePropertyAction TargetName="textBlock" PropertyName="Text" Value="Non"/>												
+		                					</i:EventTrigger>
+		                				</i:Interaction.Triggers>	                			
+		                			</Controls:ToggleSwitchButton>
+									<TextBlock x:Name="textBlock" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+								</StackPanel>
+								<TextBlock Grid.Row="1" Text="Date de réalisation "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+								<DatePicker Grid.Row="1" Grid.Column="1" Width="200"    Margin="0,0,10,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>	
+								<TextBlock Grid.Row="2" Text="Intervenant "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+								<ComboBox Margin="0,5,5,0" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" SelectedIndex="0" Width="350">
+                                    <ComboBoxItem Content="Matthieu Vanuxeem | SARL QUAPA" />
+                                </ComboBox>
+							</Grid>                			          		
+						</GroupBox>   
+						<GroupBox Header="Alimentation" Grid.Row="1" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">
+							<Grid>
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+								
+	                				<RowDefinition Height="*"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="200"/>                			
+	                				<ColumnDefinition Width="*"/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Grid.ColumnSpan="2"  Text="Origine de l'alimentation en eau froide ? "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2">
+									<RadioButton Margin="0,0,10,0" GroupName="grpAlimFroide" Content="Distribution publique" VerticalContentAlignment="Center"/>
+									<RadioButton Margin="0,0,10,0" GroupName="grpAlimFroide" Content="Forage" VerticalContentAlignment="Center"/>
+									<RadioButton Margin="0,0,10,0" GroupName="grpAlimFroide" Content="Autre" VerticalContentAlignment="Center">
+										<i:Interaction.Triggers>
+		                					<i:EventTrigger EventName="Checked">		                						
+												<ei:ChangePropertyAction TargetName="Autre" PropertyName="Opacity" Value="1"/>
+		                					</i:EventTrigger>
+											<i:EventTrigger EventName="Unchecked">		                						
+												<ei:ChangePropertyAction TargetName="Autre" PropertyName="Opacity" Value="0"/>
+		                					</i:EventTrigger>
+		                				</i:Interaction.Triggers>
+										</RadioButton>
+										<!--Controls:TextboxHelper.Watermark="Autre"
+                                         Controls:TextboxHelper.ClearTextButton="True"-->
+									<TextBox x:Name="Autre"  Width="300"  Opacity="0"  
+										                                 
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Left"
+                                        />
+									
+								</StackPanel>
+								
+							</Grid>                			          		
+						</GroupBox>         	
+					</Grid>
+                </TabItem>
+				<TabItem Header="_Réseaux |">
+                	<Grid Margin="0,20">
+                		<Grid.RowDefinitions>
+                			<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+							<RowDefinition Height="40"/>
+                			<RowDefinition Height="*"/>
+                		</Grid.RowDefinitions>
+                		<TextBlock Grid.Row="0" Grid.ColumnSpan="2"  Text="Matériaux constitutifs des réseaux "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2">
+									<ToggleButton Margin="0,0,10,0" Content="Cuivre" VerticalContentAlignment="Center" Width="150"  FontSize="16"/>
+									<ToggleButton Margin="0,0,10,0" Content="Acier galvanisé" VerticalContentAlignment="Center" Width="150"  FontSize="16"/>
+									<ToggleButton Margin="0,0,10,0" Content="inox" VerticalContentAlignment="Center" Width="150" FontSize="16"/>
+									<ToggleButton Margin="0,0,10,0" Content="PVC" VerticalContentAlignment="Center" Width="150" FontSize="16"/>
+									<ToggleButton Margin="0,0,10,0" Content="Autre" VerticalContentAlignment="Center" Width="150" FontSize="16">
+										<i:Interaction.Triggers>
+		                					<i:EventTrigger EventName="Checked">		                						
+												<ei:ChangePropertyAction TargetName="AutreReseaux" PropertyName="Opacity" Value="1"/>
+		                					</i:EventTrigger>
+											<i:EventTrigger EventName="Unchecked">		                						
+												<ei:ChangePropertyAction TargetName="AutreReseaux" PropertyName="Opacity" Value="0"/>
+		                					</i:EventTrigger>
+		                				</i:Interaction.Triggers>
+									</ToggleButton>
+										<!--Controls:TextboxHelper.Watermark="Autre"
+                                         Controls:TextboxHelper.ClearTextButton="True"-->
+									<TextBox x:Name="AutreReseaux"  Width="300"  Opacity="0"  
+										                                 
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Left"
+                                        />									
+								</StackPanel>   
+								<StackPanel Grid.Row="3"  Orientation="Horizontal">        	
+									<TextBlock Margin="0,5,0,0" Text="Existence d'interconnexions entre le réseau d’EF et d’autres réseaux ? "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+			                		<StackPanel Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchEF"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock2" PropertyName="Text" Value="Oui"/>	
+													<ei:ChangePropertyAction TargetName="ReseauxEF" PropertyName="Opacity" Value="1"/>											
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock2" PropertyName="Text" Value="Non"/>
+													<ei:ChangePropertyAction TargetName="ReseauxEF" PropertyName="Opacity" Value="0"/>												
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock2" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+								</StackPanel>
+								<StackPanel Grid.Row="4" Orientation="Horizontal" x:Name="ReseauxEF" Opacity="0">
+									<ToggleButton Margin="0,0,10,0" Content="RIA" VerticalContentAlignment="Center" Width="150"  FontSize="16"/>
+									<ToggleButton Margin="0,0,10,0" Content="Réseau d'arrosage" VerticalContentAlignment="Center" Width="150"  FontSize="16"/>
+									<ToggleButton Margin="0,0,10,0" Content="Autre" VerticalContentAlignment="Center" Width="150" FontSize="16">
+										<i:Interaction.Triggers>
+		                					<i:EventTrigger EventName="Checked">		                						
+												<ei:ChangePropertyAction TargetName="AutreReseauxEF" PropertyName="Opacity" Value="1"/>
+		                					</i:EventTrigger>
+											<i:EventTrigger EventName="Unchecked">		                						
+												<ei:ChangePropertyAction TargetName="AutreReseauxEF" PropertyName="Opacity" Value="0"/>
+		                					</i:EventTrigger>
+		                				</i:Interaction.Triggers>
+									</ToggleButton>
+									<TextBox x:Name="AutreReseauxEF"  Width="300"  Opacity="0" 
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Left"
+                                        />	
+								</StackPanel> 
+								<Grid Grid.Row="5">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="300"/>
+										<ColumnDefinition Width="100"/>
+										<ColumnDefinition Width="100"/>
+										<ColumnDefinition Width="110"/>
+									</Grid.ColumnDefinitions>
+									<TextBlock Text="Calorifugeage des canalisations d'EF "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<RadioButton Grid.Column="1" Content="Intégral" GroupName="ef" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+									<RadioButton Grid.Column="2" Content="Partiel" GroupName="ef" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+									<RadioButton Grid.Column="3" Content="Inexistant" GroupName="ef" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+								</Grid>
+								<Grid Grid.Row="6">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="300"/>
+										<ColumnDefinition Width="100"/>
+										<ColumnDefinition Width="100"/>
+										<ColumnDefinition Width="110"/>
+									</Grid.ColumnDefinitions>
+									<TextBlock Text="Calorifugeage des canalisations d'ECS "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<RadioButton Grid.Column="1" Content="Intégral" GroupName="ecs" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+									<RadioButton Grid.Column="2" Content="Partiel" GroupName="ecs" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+									<RadioButton Grid.Column="3" Content="Inexistant" GroupName="ecs" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+								</Grid>
+								<Grid Grid.Row="7">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="300"/>
+										<ColumnDefinition Width="100"/>
+										<ColumnDefinition Width="190"/>
+										<ColumnDefinition Width="190"/>
+									</Grid.ColumnDefinitions>
+									<TextBlock Text="Type de réseau d'ECS "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<RadioButton Grid.Column="1" Content="Linéaire" GroupName="Typeecs" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+									<RadioButton Grid.Column="2" Content="Bouclé partiellement" GroupName="Typeecs" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+									<RadioButton Grid.Column="3" Content="Bouclé intégralement" GroupName="Typeecs" VerticalContentAlignment="Center" Margin="0,0,20,0"/>
+								</Grid>
+								<StackPanel Grid.Row="8" Orientation="Horizontal">
+									<TextBlock Text="Si le réseau est bouclé, température en retour de boucle : "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<TextBox   Grid.Column="1" Width="100" 
+										                           
+                                         VerticalAlignment="Top"
+                                         HorizontalAlignment="Left"
+                                        />	
+										<TextBlock Text="°C"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+								</StackPanel>
+								<GroupBox  x:Name="listeSites" Grid.Row="9" Grid.ColumnSpan="2" Opacity="1" Header="Appareils alimentés en eau" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">								
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition/>
+										<RowDefinition Height="40"/>
+									</Grid.RowDefinitions>									
+									<ItemsControl x:Name="SitesList" VerticalAlignment="Stretch" ItemTemplate="{DynamicResource AppareilDataTemplate}" ItemsPanel="{DynamicResource AppareilsListItemsPanelTemplate}" Margin="2,0,0,0"/>
+									<StackPanel Grid.Row="2" HorizontalAlignment="Left" Margin="50,0,0,0">
+										<Button Content="Ajouter un appareil"/>
+									</StackPanel>
+								</Grid>
+							</GroupBox>
+					</Grid>
+                </TabItem>
+				<TabItem Header="_Production Traitements |">
+                	<Grid Margin="0,20">
+                		<Grid.RowDefinitions>                			
+                			<RowDefinition Height="0.5*"/>                			
+                			<RowDefinition Height="0.5*"/>
+                		</Grid.RowDefinitions>
+                		<GroupBox Header="Production" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">
+							<Grid>
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="60"/>									
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+	                				<RowDefinition/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="430"/>                			
+	                				<ColumnDefinition Width="*"/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Text="Type de production ECS :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		
+									<CheckBox HorizontalAlignment="Left" Grid.Row="1" Margin="0,0,10,0" Content="Par accumulation (ballon - nombre)" VerticalContentAlignment="Center" Width="300"  FontSize="16"/>
+									<CheckBox HorizontalAlignment="Left" Grid.Row="2" Margin="0,0,10,0" Content="Semi instantanée (échangeur + ballon &gt; 400L - nombre)" VerticalContentAlignment="Center" Width="500"  FontSize="16"/>
+									<CheckBox HorizontalAlignment="Left" Grid.Row="3" Margin="0,0,10,0" Content="Instantanée (échangeur - nombre)" VerticalContentAlignment="Center" Width="500"  FontSize="16"/>
+									
+									<TextBox	Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0" Height="38" VerticalAlignment="Top"/>
+									<TextBox	Grid.Row="2" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>	
+									<TextBox	Grid.Row="3" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>
+								
+								<TextBlock Grid.Row="4" Text="Température de l’eau chaude sanitaire en sortie de production ="  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<TextBox	Grid.Row="4" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,10,6,10"/>
+							</Grid>                			          		
+						</GroupBox>   
+						<GroupBox Header="Traitements" Grid.Row="1" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">
+							<Grid>
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="120"/>									
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+	                				<RowDefinition/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="430"/>                			
+	                				<ColumnDefinition Width="*"/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Type de traitement(s) installé(s) sur le réseau d’eau chaude sanitaire :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		
+									<CheckBox HorizontalAlignment="Left" Grid.Row="1" Margin="0,0,10,0" Content="Adoucissement 				➭ - nom du produit :" VerticalContentAlignment="Center" Width="300"  FontSize="16"/>
+									<CheckBox HorizontalAlignment="Left" Grid.Row="2" Margin="0,0,10,0" Content="Anti-corrosion/filmogène   ➭ - nom du produit :" VerticalContentAlignment="Center" Width="500"  FontSize="16"/>
+									<CheckBox HorizontalAlignment="Left" Grid.Row="3" Margin="0,0,10,0" Content="Désinfection               ➭ - nom du produit :" VerticalContentAlignment="Center" Width="500"  FontSize="16"/>
+									
+									<TextBox	Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>
+									<TextBox	Grid.Row="2" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>	
+									<TextBox	Grid.Row="3" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>
+									<StackPanel Grid.Row="4" Grid.Column="1">
+										<StackPanel Orientation="Horizontal">
+											<TextBlock Text="Utilisation :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+											<RadioButton Margin="10,0,0,0" GroupName="desinf" Content="Continue" VerticalContentAlignment="Center"/>
+											<RadioButton Margin="10,0,0,0" GroupName="desinf" Content="Discontinue" VerticalContentAlignment="Center"/>
+										</StackPanel>
+										<StackPanel Orientation="Horizontal">
+											<TextBlock Text="Taux de désinfectant injecté : "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+											<TextBox Width="150" HorizontalAlignment="Left" Margin="10,2,0,0"/>
+											<TextBlock Text="mg/L"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+										</StackPanel>
+										<StackPanel Orientation="Horizontal">
+											<TextBlock Text="Taux de désinfectant résiduel : "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+											<TextBox Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>
+											<TextBlock Text="mg/L"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+										</StackPanel>
+		                			</StackPanel>
+							</Grid>               			          		
+						</GroupBox>         	
+					</Grid>
+                </TabItem>	
+				<TabItem Header="_Distribution Protection |">
+                	<Grid  Margin="0,0">
+                		<Grid.RowDefinitions>                			
+                			<RowDefinition Height="0.55*"/>                			
+                			<RowDefinition Height="0.45*"/>
+                		</Grid.RowDefinitions>       
+						<GroupBox Header="Distribution" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">
+							<Grid>
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="60"/>
+									<RowDefinition Height="40"/>									
+									<RowDefinition Height="60"/>	                				
+	                				
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="392"/>                			
+	                				<ColumnDefinition/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Text="Mitigeur(s) collectif(s) :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchMitigeur"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock3" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock3" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock3" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									<TextBlock Grid.Row="1" Text="Mitigeur(s) au niveau de chaque point d’usage :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchMitigeurPoint"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock4" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock4" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock4" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									<TextBlock Grid.Row="2" Text="Température de l’eau mitigée ="  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<TextBox	Grid.Row="2" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>
+									<TextBlock Grid.Row="3" Text="Changement régulier des périphériques (pommeaux de douches, flexibles…) :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                			<StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" >
+										<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+											<Controls:ToggleSwitchButton x:Name="SwitchChangementReg"										
+													VerticalAlignment="Top" HorizontalAlignment="Right" >
+				                				<i:Interaction.Triggers>
+				                					<i:EventTrigger EventName="Checked">
+				                						<ei:ChangePropertyAction TargetName="textBlock5" PropertyName="Text" Value="Oui"/>
+																									
+				                					</i:EventTrigger>
+													<i:EventTrigger EventName="Unchecked">
+				                						<ei:ChangePropertyAction TargetName="textBlock5" PropertyName="Text" Value="Non"/>
+																									
+				                					</i:EventTrigger>
+				                				</i:Interaction.Triggers>	                			
+				                			</Controls:ToggleSwitchButton>
+											<TextBlock x:Name="textBlock5" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+										</StackPanel>
+									</StackPanel>
+									<TextBlock Grid.Row="4" Text="Température de l'EF "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<TextBox	Grid.Row="4" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="0,2,0,0"/>
+									<TextBlock Grid.Row="5" Text="Température de l’ECS au point d’usage le plus éloigné de la production = "  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+									<TextBox Margin="0,2,0,20"	Grid.Row="5" Grid.Column="1" Width="150" HorizontalAlignment="Left"/>
+									
+							</Grid>                			          		
+						</GroupBox>   
+						<GroupBox Header="Protection" Grid.Row="1" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}">
+							<Grid>
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+													
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+	                				<RowDefinition/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="430"/>                			
+	                				<ColumnDefinition Width="*"/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Existence de dispositifs de protection contre les retours d’eau à l’amont de chaque :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<TextBlock Grid.Row="1" Text="Arrivée générale d’eau froide"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchArriveeEauFroide"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock6" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock6" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock6" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									<TextBlock Grid.Row="2" Text="Interconnexion entre réseaux"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                			<StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchInterconnexion"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock7" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock7" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock7" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									<TextBlock Grid.Row="3" Text="Bâtiment"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                			<StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchBatiment"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock8" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock8" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock8" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									<TextBlock Grid.Row="4" Text="Appareil alimenté par le réseau d’eau"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                			<StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchAppareilReseau"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock9" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock9" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock9" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									<TextBlock Grid.Row="5" Text="Dispositif de traitement"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                			<StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchDispositif"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock10" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock10" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock10" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+							</Grid>               			          		
+						</GroupBox>     	
+					</Grid>
+                </TabItem>	
+				<TabItem Header="_Surveillance">
+                	<Grid Margin="0,20">					
+								<Grid.RowDefinitions>
+	                				<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+													
+									<RowDefinition Height="40"/>
+	                				<RowDefinition Height="40"/>
+	                				<RowDefinition/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>                			
+	                				<ColumnDefinition Width="430"/>                			
+	                				<ColumnDefinition Width="*"/>
+                				</Grid.ColumnDefinitions>
+								<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Existence de dispositifs de protection contre les retours d’eau à l’amont de chaque :"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<TextBlock Grid.Row="1" Text="Arrivée générale d’eau froide"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>
+		                		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+										<Controls:ToggleSwitchButton x:Name="SwitchMesureTemperature"										
+												VerticalAlignment="Top" HorizontalAlignment="Right" >
+			                				<i:Interaction.Triggers>
+			                					<i:EventTrigger EventName="Checked">
+			                						<ei:ChangePropertyAction TargetName="textBlock11" PropertyName="Text" Value="Oui"/>
+																								
+			                					</i:EventTrigger>
+												<i:EventTrigger EventName="Unchecked">
+			                						<ei:ChangePropertyAction TargetName="textBlock11" PropertyName="Text" Value="Non"/>
+																								
+			                					</i:EventTrigger>
+			                				</i:Interaction.Triggers>	                			
+			                			</Controls:ToggleSwitchButton>
+										<TextBlock x:Name="textBlock11" Text="Non"  TextWrapping="Wrap" FontFamily="{DynamicResource HeaderFontFamily}" FontSize="18.667" Foreground="{DynamicResource AccentColorBlueBrush}"/>											
+									</StackPanel>
+									 <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="3">
+									 	<StackPanel Orientation="Horizontal">
+											<CheckBox Margin="0,0,10,0" Content="eau froide, au niveau : " VerticalContentAlignment="Top" Width="200"  FontSize="16"/>
+											<ToggleButton Margin="0,0,10,0" Content="Réseau" VerticalContentAlignment="Center" Width="150"  FontSize="16"/>
+											<ToggleButton Margin="0,0,10,0" Content="Points d’usage" VerticalContentAlignment="Center" Width="150" FontSize="16"/>											
+											<ToggleButton Margin="0,0,10,0" Content="Autre" VerticalContentAlignment="Center" Width="150" FontSize="16">
+												<i:Interaction.Triggers>
+				                					<i:EventTrigger EventName="Checked">		                						
+														<ei:ChangePropertyAction TargetName="temperatureEF" PropertyName="Opacity" Value="1"/>
+				                					</i:EventTrigger>
+													<i:EventTrigger EventName="Unchecked">		                						
+														<ei:ChangePropertyAction TargetName="temperatureEF" PropertyName="Opacity" Value="0"/>
+				                					</i:EventTrigger>
+				                				</i:Interaction.Triggers>
+											</ToggleButton>
+												<!--Controls:TextboxHelper.Watermark="Autre"
+		                                         Controls:TextboxHelper.ClearTextButton="True"-->
+											<TextBox x:Name="temperatureEF"  Width="300"  Opacity="0"  
+												                                 
+		                                         VerticalAlignment="Center"
+		                                         HorizontalAlignment="Left"
+		                                        />									
+										</StackPanel>   
+										<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+											<CheckBox Margin="0,0,10,0" Content="eau chaude, au niveau : " VerticalContentAlignment="Top" Width="200"  FontSize="16"/>
+											<ToggleButton Margin="0,0,10,0" Content="Production" VerticalContentAlignment="Center" Width="150"  FontSize="16"/>
+											<ToggleButton Margin="0,0,10,0" Content="Points d’usage" VerticalContentAlignment="Center" Width="150" FontSize="16"/>											
+											<ToggleButton Margin="0,0,10,0" Content="Autre" VerticalContentAlignment="Center" Width="150" FontSize="16">
+												<i:Interaction.Triggers>
+				                					<i:EventTrigger EventName="Checked">		                						
+														<ei:ChangePropertyAction TargetName="temperatureEC" PropertyName="Opacity" Value="1"/>
+				                					</i:EventTrigger>
+													<i:EventTrigger EventName="Unchecked">		                						
+														<ei:ChangePropertyAction TargetName="temperatureEC" PropertyName="Opacity" Value="0"/>
+				                					</i:EventTrigger>
+				                				</i:Interaction.Triggers>
+											</ToggleButton>
+												<!--Controls:TextboxHelper.Watermark="Autre"
+		                                         Controls:TextboxHelper.ClearTextButton="True"-->
+											<TextBox x:Name="temperatureEC"  Width="300"  Opacity="0"  
+												                                 
+		                                         VerticalAlignment="Center"
+		                                         HorizontalAlignment="Left"
+		                                        />									
+										</StackPanel>   
+									 </StackPanel>
+					</Grid>
+                </TabItem>	
+	</TabControl>
+</Grid>

@@ -1,0 +1,9 @@
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\bin\Debug\ClaimsAuth.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\bin\Debug\ClaimsAuth.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\bin\Debug\Microsoft.SharePoint.Client.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\bin\Debug\Microsoft.SharePoint.Client.xml
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\bin\Debug\Microsoft.SharePoint.Client.Runtime.xml
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\obj\Debug\ClaimsAuth.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\obj\Debug\ClaimsAuth.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ClaimsAuth\obj\Debug\ResolveAssemblyReference.cache

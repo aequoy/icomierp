@@ -1,0 +1,33 @@
+﻿<Grid x:Class="ICOMI_SPClient.Views.HACCPView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+	<Grid.Background>
+		<SolidColorBrush Color="#FFB2E0F4"/>
+	</Grid.Background>
+		<Grid.Triggers> 
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded"> 
+                        <BeginStoryboard> 
+                            <Storyboard> 
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                                 Duration="00:00:01" 
+                                                 From="0" 
+                                                 To="1" /> 
+                            </Storyboard> 
+                        </BeginStoryboard> 
+                    </EventTrigger> 
+                    <EventTrigger RoutedEvent="FrameworkElement.Unloaded"> 
+                        <BeginStoryboard> 
+                            <Storyboard> 
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                                 Duration="00:00:01" 
+                                                 From="1" 
+                                                 To="0" /> 
+                            </Storyboard> 
+                        </BeginStoryboard> 
+                    </EventTrigger> 
+                </Grid.Triggers>
+</Grid>

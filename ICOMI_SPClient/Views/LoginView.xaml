@@ -1,0 +1,80 @@
+﻿<Grid x:Class="ICOMI_SPClient.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uti="clr-namespace:ICOMI_SPClient.Utilities"
+             mc:Ignorable="d" 
+             Height="350" Width="610" Background="White">
+	<Grid.Resources>
+		 <ResourceDictionary>
+	            <ResourceDictionary.MergedDictionaries>
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+	                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+	            </ResourceDictionary.MergedDictionaries>
+		 	<SolidColorBrush x:Key="HighlightBrush2"
+		 		Color="{StaticResource HighlightDarkColor}" />
+		</ResourceDictionary>
+	</Grid.Resources>
+	<Grid.Effect>
+		<DropShadowEffect/>
+	</Grid.Effect>
+	<Grid.RowDefinitions>
+		<RowDefinition Height="0.054*"/>
+		<RowDefinition Height="0.172*"/>
+		<RowDefinition Height="0.667*"/>
+		<RowDefinition Height="0.107*"/>
+	</Grid.RowDefinitions>
+	
+		<Grid Grid.Row="2" Background="White" Margin="10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.765*"/>
+				<ColumnDefinition Width="0.235*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="70"/>
+				<RowDefinition Height="70"/>
+				<RowDefinition Height="70"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Border Grid.ColumnSpan="2" Grid.RowSpan="3" BorderThickness="2" BorderBrush="#FFADA8A8">
+				<Border.Background>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="White" Offset="0"/>
+						<GradientStop Color="#FFEBE7E7" Offset="1"/>
+					</LinearGradientBrush>
+				</Border.Background>
+			</Border>
+			<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10,10,10,10" HorizontalAlignment="Right" VerticalAlignment="Center"> 
+					<TextBlock Style="{DynamicResource HeaderTextStyle}"
+                                   TextWrapping="Wrap"
+                                   Text="Utilisateur"
+                                   Margin="10,10,0,0" Foreground="Black" />
+					<TextBox Width="266" Margin="10,0,0,0" Text="{Binding UserName}"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10,10,10,10" HorizontalAlignment="Right" VerticalAlignment="Center"> 
+					<TextBlock Style="{DynamicResource HeaderTextStyle}"
+                                   TextWrapping="Wrap"
+                                   Text="Mot de passe"
+                                   Margin="10,10,0,0" Foreground="Black" />
+            <PasswordBox x:Name="txtPassword" Width="266" Margin="10,0,0,0" />
+			</StackPanel>
+			<Button Content="Se Connecter" Grid.Row="2"
+                                Margin="20,20,10,20" Command="{Binding ConnexionCommand}"  CommandParameter="{Binding ElementName=txtPassword}"/>
+		</Grid>
+		<Rectangle HorizontalAlignment="Left" Width="223.97" Margin="10,3,0,3" Fill="{DynamicResource ApplicationNameBrush}"/>
+		<TextBlock Style="{DynamicResource ApplicationNameStyle}"
+			TextWrapping="Wrap"
+			Text="Connexion"
+			Foreground="Black" Grid.Row="1" Margin="10,0,0,0" VerticalAlignment="Stretch" d:LayoutOverrides="Height" />
+		<Button Content="Annuler" Grid.Row="3"
+			Margin="10,6.5,20,6.3" HorizontalAlignment="Right" Width="192.9" Command="{Binding AnnulerCommand}"/>
+		<TextBlock Grid.Row="3" TextWrapping="Wrap" Text="{Binding ErrorText}" Foreground="Red" Margin="10,0,281,0"/>
+	
+
+</Grid>

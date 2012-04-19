@@ -1,0 +1,72 @@
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\WP8Controls.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\WP8Controls.pdb
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\System.Windows.Interactivity.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\System.Windows.Interactivity.xml
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\ApplicationBar.baml
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\SquareButton.baml
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\ApplicationBar.g.cs
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\SquareButton.g.cs
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\WP8Controls_MarkupCompile.cache
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\WP8Controls.g.resources
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\WP8Controls.Properties.Resources.resources
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\GenerateResource.read.1.tlog
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\GenerateResource.write.1.tlog
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\WP8Controls.dll
+C:\AitDev\WPF Metro\WP8Controls\obj\Debug\WP8Controls.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\WP8Controls.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\WP8Controls.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\ApplicationBar.baml
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\SquareButton.baml
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\ApplicationBar.g.cs
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\SquareButton.g.cs
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\WP8Controls_MarkupCompile.cache
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\WP8Controls.g.resources
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\WP8Controls.Properties.Resources.resources
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\WP8Controls.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\WP8Controls.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\WP8Controls\obj\Debug\GenerateResource.write.1.tlog

@@ -1,0 +1,73 @@
+﻿<Grid x:Class="ICOMI_SPClient.Views.BHPView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:dt="clr-namespace:ICOMI_SPClient.ViewModels.DesignTime"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200"
+      d:DataContext="{d:DesignInstance {x:Type dt:BHPViewModelMock}, IsDesignTimeCreatable=True}">
+    <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml"/>
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml"/>
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml"/>
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml"/>
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            	<DataTemplate x:Key="HeaderPanoramaDataTemplate">
+            		<Grid/>
+            	</DataTemplate>
+            </ResourceDictionary>
+    </Grid.Resources>
+  			<Grid.Triggers> 
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded"> 
+                        <BeginStoryboard> 
+                            <Storyboard> 
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                                 Duration="00:00:01" 
+                                                 From="0" 
+                                                 To="1" /> 
+                            </Storyboard> 
+                        </BeginStoryboard> 
+                    </EventTrigger> 
+                    <EventTrigger RoutedEvent="FrameworkElement.Unloaded"> 
+                        <BeginStoryboard> 
+                            <Storyboard> 
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                                 Duration="00:00:01" 
+                                                 From="1" 
+                                                 To="0" /> 
+                            </Storyboard> 
+                        </BeginStoryboard> 
+                    </EventTrigger> 
+                </Grid.Triggers>
+    <Controls:Panorama x:Name="MainPanorama" VerticalAlignment="Stretch" Margin="0,5,5,5" HeaderOffset="0">
+        <Controls:PanoramaItem  Header="Les rubriques"  x:Name="panoramaItem1" Foreground="Black" FontFamily="Segoe UI Light" HeaderTemplate="{DynamicResource HeaderPanoramaDataTemplate}" >
+            <ListBox x:Name="lbRubriques" Height="500" BorderBrush="{x:Null}" ItemsSource="{Binding LesRubriques}" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="{x:Null}">
+                <i:Interaction.Behaviors>
+                    <behaviours:TiltBehavior KeepDragging="False"/>
+                </i:Interaction.Behaviors>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel  IsItemsHost="True" Orientation="Horizontal">
+                        </WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Controls:Tile DataContext="{Binding}" Title="{Binding Libelle}" Command="{Binding DataContext.SelectRubriqueCommand, ElementName=lbRubriques}" CommandParameter="{Binding}">
+                            <Controls:MetroImage Source="{DynamicResource appbar_book}" />
+                        </Controls:Tile>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Controls:PanoramaItem>
+    </Controls:Panorama>
+
+</Grid>

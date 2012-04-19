@@ -1,0 +1,5 @@
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_CONTENT\bin\Debug\ICOMI_CONTENT.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_CONTENT\bin\Debug\ICOMI_CONTENT.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_CONTENT\obj\Debug\ICOMI_CONTENT.dll
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_CONTENT\obj\Debug\ICOMI_CONTENT.pdb
+C:\Users\aequoy.ACCESSIT\Documents\CLIENTS\TAKTUS\ENTRETIENS_STAGE\TestSharepointOnline\TestSharepointOnline\C#\ICOMI_CONTENT\obj\Debug\ResolveAssemblyReference.cache

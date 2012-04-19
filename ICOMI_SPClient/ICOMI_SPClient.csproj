@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8CFF05A-543D-475A-B4A9-1B6B9374B266}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICOMI_SPClient</RootNamespace>
+    <AssemblyName>ICOMI_SPClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WPF4, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1673db7d5906b0ad, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\WPF4\GalaSoft.MvvmLight.Extras.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WPF4, Version=0.0.0.0, Culture=neutral, PublicKeyToken=63eb5c012e0b3c1c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\WPF4\GalaSoft.MvvmLight.WPF4.dll</HintPath>
+    </Reference>
+    <Reference Include="GrayscaleEffect">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Phone&amp;surface\MahApps-MahApps.Metro-abda466\Lib\GrayscaleEffect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="SStuff.FlowControls">
+      <HintPath>..\..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.FlowControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SStuff.LayoutAlgorithms">
+      <HintPath>..\..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.LayoutAlgorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="SStuff.WpfEffects">
+      <HintPath>..\..\..\..\WpfApplication1\WpfApplication1\Resources\CosmopolitanWpf\bin\Debug\SStuff.WpfEffects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.Expressions, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Windows.Controls.ScheduleView, Version=2012.1.215.35, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controls\WebDocumentLoader.cs" />
+    <Compile Include="Controls\ImageLoader.cs" />
+    <Compile Include="Message\AddBPHMessage.cs" />
+    <Compile Include="Message\ChangeStateMessage.cs" />
+    <Compile Include="Message\LoginMessage.cs" />
+    <Compile Include="Message\SelectRubriqueMessage.cs" />
+    <Compile Include="Message\ViewTaskMessage.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\BackEasingDoubleAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\ElasticEasingDoubleAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\ExpoEasingDoubleAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\ExpoPointEasingAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\LinearEasingDoubleAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\QuadEasingDoubleAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\QuadPointEasingAnimation.cs" />
+    <Compile Include="Utilities\Animation\EasingAnimationsFunction\SineEasingDoubleAnimation.cs" />
+    <Compile Include="Utilities\Animation\WPFAnimationHelper.cs" />
+    <Compile Include="Utilities\GenericCommand.cs" />
+    <Compile Include="Utilities\IOExtensions.cs" />
+    <Compile Include="Utilities\Menu.cs" />
+    <Compile Include="Utilities\NativeMethods.cs" />
+    <Compile Include="Utilities\PasswordHelper.cs" />
+    <Compile Include="Utilities\RubriqueRoutedEventArgs.cs" />
+    <Compile Include="Utilities\SessionContext.cs" />
+    <Compile Include="ViewModels\AccueilViewModel.cs" />
+    <Compile Include="ViewModels\AddBPHViewModel.cs" />
+    <Compile Include="ViewModels\BHPDocumentViewModel.cs" />
+    <Compile Include="ViewModels\BHPViewModel.cs" />
+    <Compile Include="ViewModels\DesignTime\BHPViewModelMock.cs" />
+    <Compile Include="ViewModels\DesignTime\HomeViewModelMock.cs" />
+    <Compile Include="ViewModels\EtablissementViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\RecetteViewModel.cs" />
+    <Compile Include="ViewModels\TaskViewModel.cs" />
+    <Compile Include="Views\AccueilView.xaml.cs">
+      <DependentUpon>AccueilView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddBHPDocumentView.xaml.cs">
+      <DependentUpon>AddBHPDocumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BHPDocumentView.xaml.cs">
+      <DependentUpon>BHPDocumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BHPView.xaml.cs">
+      <DependentUpon>BHPView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiversView.xaml.cs">
+      <DependentUpon>DiversView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EtablissementView.xaml.cs">
+      <DependentUpon>EtablissementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HACCPView.xaml.cs">
+      <DependentUpon>HACCPView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstallationView.xaml.cs">
+      <DependentUpon>InstallationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyTasksView.xaml.cs">
+      <DependentUpon>MyTasksView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecetteView.xaml.cs">
+      <DependentUpon>RecetteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchView.xaml.cs">
+      <DependentUpon>SearchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TaskView.xaml.cs">
+      <DependentUpon>TaskView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\CoreStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\SDKStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AccueilView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddBHPDocumentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BHPDocumentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BHPView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DiversView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EtablissementView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HACCPView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstallationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MyTasksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RecetteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SearchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TaskView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WIN8RD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\AitDev\MahApps-MahApps.Metro-5979fe9\MahApps.Metro.Resources\MahApps.Metro.Resources.csproj">
+      <Project>{E708AC99-605B-42A0-8D20-ABCA8FE42DD2}</Project>
+      <Name>MahApps.Metro.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\..\..\..\AitDev\MahApps-MahApps.Metro-5979fe9\MahApps.Metro\MahApps.Metro.csproj">
+      <Project>{5B1710D2-5DC8-4754-91B2-19165DE49B3D}</Project>
+      <Name>MahApps.Metro</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICOMI_CONTENT\ICOMI_CONTENT.csproj">
+      <Project>{7A25AC90-3F00-4A7A-8F12-7F3F7F35C54C}</Project>
+      <Name>ICOMI_CONTENT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICOMI_DOMAIN\ICOMI_DOMAIN.csproj">
+      <Project>{A80DD72B-4D5A-4318-9D8E-ADE575B7AA78}</Project>
+      <Name>ICOMI_DOMAIN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICOMI_FW\ICOMI_FW.csproj">
+      <Project>{AE336A13-1BA2-4CD9-B5CA-234E09C7567B}</Project>
+      <Name>ICOMI_FW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICOMI_SPService\ICOMI_SPService.csproj">
+      <Project>{46EEF76B-65D5-4931-B96D-54B7EAB5AC43}</Project>
+      <Name>ICOMI_SPService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WP8Controls\WP8Controls.csproj">
+      <Project>{86072A7C-8EE9-4775-891B-97FFAB66AF78}</Project>
+      <Name>WP8Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cooking_secrets.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\documents divers.JPG" />
+    <Resource Include="Resources\doc_bubble.PNG" />
+    <Resource Include="Resources\haccp.JPG" />
+    <Resource Include="Resources\hygiene.JPG" />
+    <Resource Include="Resources\recette.JPG" />
+    <Resource Include="Resources\taches.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\securite.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\_alex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\4030875-green-leaf-and-healthy-vegetables.jpg" />
+    <Resource Include="Resources\back.JPG" />
+    <Resource Include="Resources\Fresh_Fruits_and_Vegetables.jpg" />
+    <Resource Include="Resources\fruits-and-veggies1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\book.JPG" />
+    <Resource Include="Resources\citron.JPG" />
+    <Resource Include="Resources\kiwi.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\monespace.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MP900433052.JPG" />
+    <Resource Include="Resources\MP910221704.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MP900427641.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
